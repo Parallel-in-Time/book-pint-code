@@ -2,4 +2,4 @@
 
 _No codes is associated to this section_
 
-[:book: Table of Content](../README.md) | [:arrow_right: Previous Problem](../prob1.2/README.md) | [:arrow_right: Next Problem](../prob1.4/README.md)
+[:book: Table of Content](../README.md) | [:arrow_left: Previous Problem](../prob1.2/README.md) | [:arrow_right: Next Problem](../prob1.4/README.md)
