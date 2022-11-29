@@ -9,6 +9,5 @@
 - [Section 5.7 : Revisionist Integral Deferred Correction (RIDC)](./sec5.7/README.md)
 - [Section 5.8 : ParaExp](./sec5.8/README.md)
 - [Section 5.9 : Problems](./sec5.9/README.md)
-  - Problem 5.1 : To be added
 
 [:book: Table of Content](../README.md) | [:arrow_left: Previous Chapter](../chap4/README.md)
