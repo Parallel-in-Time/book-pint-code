@@ -13,3 +13,4 @@ for n=1:N
   axis([0 1 0 21]); xlabel('x'); ylabel('u');
   pause
 end;
+

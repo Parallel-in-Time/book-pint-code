@@ -85,3 +85,5 @@ for tEnd in [0.5, 1, 1.5, 1.78, 2]:
         plt.legend()
         plt.grid(True)
         plt.tight_layout()
+
+plt.show()
