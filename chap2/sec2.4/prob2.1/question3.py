@@ -8,7 +8,7 @@ Created on Wed Aug  3 10:12:16 2022
 import numpy as np
 import matplotlib.pyplot as plt
 
-from nievergelt import forwardEuler
+from solver import forwardEuler
 
 
 def rhs(t, u):

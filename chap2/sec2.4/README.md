@@ -1,7 +1,7 @@
 # Section 2.4 : Problems
 
 - [Problem 2.1 : Implementation of the Nievergelt method](./prob2.1/README.md)
-- Problem 2.2 : Convergence of multiple shooting for linear initial value problems
+- [Problem 2.2 : Analysis of Multiple Shooting](./prob2.2/README.md)
 - Problem 2.3 : Theoretical speedup of Parareal
 - Problem 2.4 : Parareal for the Lorenz equations
 - Problem 2.5 : Generating functions for Bernoulli number computations

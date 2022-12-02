@@ -8,7 +8,7 @@ Created on Wed Aug  3 10:05:55 2022
 import numpy as np
 import matplotlib.pyplot as plt
 
-from nievergelt import forwardEuler, nievergelt
+from solver import forwardEuler, nievergelt
 
 # Problem parameters
 tBeg = 0
