@@ -3,9 +3,9 @@
 - Implementation of the Multiple Shooting method : [MultipleShooting.m](./MultipleShooting.m)
 - Generic implementation of Forward Euler : [ForwardEuler.m](./ForwardEuler.m)
 - Generic implementation of generic coupled solver (solution/Jacobian) with Forward Euler : [CForwardEuler.m](./CForwardEuler.m)
-- Code for the example of Multiple Shooting with Lorenz equations : [exampleMultipleShootingLorenz.m](./exampleMultipleShootingLorenz.m)
-- Script for the figures on the Multiple Shooting solution with Lorenz equations : [exampleMultipleShootingLorenz_fig.m](./exampleMultipleShootingLorenz_fig.m)
-- Script for the figures on the Multiple Shooting error with Lorenz equations : [exampleMultipleShootingLorenzError_fig.m](./exampleMultipleShootingLorenzError_fig.m)
+- Example code for Multiple Shooting with the Lorenz equations : [exampleMultipleShootingLorenz.m](./exampleMultipleShootingLorenz.m)
+- Script for the figures on the Multiple Shooting solution with Lorenz equations : [exampleMultipleShootingLorenzFig.m](./exampleMultipleShootingLorenzFig.m)
+- Script for the figures on the Multiple Shooting error with Lorenz equations : [exampleMultipleShootingLorenzErrorFig.m](./exampleMultipleShootingLorenzErrorFig.m)
 
 _Python implementation :_
 

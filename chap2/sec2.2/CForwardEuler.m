@@ -1,10 +1,9 @@
 function [u1,V]=CForwardEuler(f,jac,t0,t1,u0,n)
-nDOF=length(u0);
-u0=reshape([u0, eye(nDOF)],[],1);
-rhs=@(t,u) [f(t,u(1:nDOF)); 
-            reshape(jac(t,u(1:nDOF))*reshape(u(nDOF+1:end),nDOF,nDOF),[],1)];
-[~,u]=ForwardEuler(rhs,[t0 t1],u0,n);
-u=u(:,end);
-u1=u(1:nDOF);
-V=reshape(u(nDOF+1:end),nDOF,nDOF);
-
+s=length(u0);
+u0=u0(:);                                % make u0 a column vector
+u0All=reshape([u0,eye(s)],[],1);         % initial values
+rhs=@(t,u) [f(t,u(1:s)),reshape(jac(t,u(1:s))*reshape(u(s+1:end),s,s),1,[])];
+[~,u]=ForwardEuler(rhs,[t0 t1],u0All,n);
+u=u(end,:);                              % final time only
+u1=u(1:s);                               % extract numerical approximation
+V=reshape(u(s+1:end),s,s);               % and reshaped Jacobian
