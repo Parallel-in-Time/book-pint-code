@@ -11,4 +11,4 @@
 - Problem 2.9 : Parareal for the heat equation
 - Problem 2.10 : Parareal for the advection-diffusion-reaction equation
 
-[:book: Table of Content](../README.md) | [:arrow_left: Previous Section](../sec2.2/README.md) | [:arrow_right: Next Chapter](../../chap3/README.md)
+[:book: Table of Content](../../README.md) | [:arrow_left: Previous Section](../sec2.2/README.md)

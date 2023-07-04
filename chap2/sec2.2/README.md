@@ -12,4 +12,4 @@ _Python implementation :_
 - module implementing Multiple Shooting and Forward Euler : [solver.py](./solver.py)
 - script reproducing the errors curves with Lorenz equations : [figures.py](./figures.py)
 
-[:book: Table of Content](../README.md) | [:arrow_left: Previous Section](../sec2.1/README.md) | [:arrow_right: Next Section](../sec2.3/README.md)
+[:book: Table of Content](../../README.md) | [:arrow_left: Previous Section](../sec2.1/README.md) | [:arrow_right: Next Section](../sec2.3/README.md)

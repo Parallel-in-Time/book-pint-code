@@ -2,4 +2,4 @@
 
 - main module for all questions : [solver.py](./solver.py)
 
-[:book: Table of Content](../README.md) | [:arrow_left: Previous Problem](../prob2.1/README.md) | [:arrow_right: Next Problem](../prob2.3/README.md)
+[:book: Problem Summary](../README.md) | [:arrow_left: Previous Problem](../prob2.1/README.md)

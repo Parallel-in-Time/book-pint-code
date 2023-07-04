@@ -5,4 +5,4 @@
 - code for question 3 : [sol_traj.py](./sol_traj.py), [sol_traj.m](./sol_traj.m)
 - code for question 4 & 5 : [sol_err.py](./sol_traj.py), [sol_err.m](./sol_traj.m)
 
-[:book: Table of Content](../README.md) | [:arrow_right: Next Problem](../prob1.2/README.md)
+[:book: Problem Summary](../README.md) | [:arrow_right: Next Problem](../prob1.2/README.md)

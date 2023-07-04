@@ -6,4 +6,4 @@
 - code for question 3 : [question3.py](./question3.py)
 - code for question 4 : [question4.py](./question4.py)
 
-[:book: Table of Content](../README.md) | [:arrow_right: Next Problem](../prob2.2/README.md)
+[:book: Problem Summary](../README.md) | [:arrow_right: Next Problem](../prob2.2/README.md)

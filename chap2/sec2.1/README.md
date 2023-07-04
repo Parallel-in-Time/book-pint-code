@@ -7,4 +7,4 @@
 - Script to generate the figure for the linear problem : [exampleNievergeltLinearFig.m](./exampleNievergeltLinearFig.m)
 - Script to generate the figure for the non-linear prolem : [exampleNievergeltNonLinearFig.m](./exampleNievergeltNonLinearFig.m)
 
-[:book: Table of Content](../README.md) | [:arrow_right: Next Section](../sec2.2/README.md)
+[:book: Table of Content](../../README.md) | [:arrow_right: Next Section](../sec2.2/README.md)

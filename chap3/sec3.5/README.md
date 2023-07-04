@@ -7,4 +7,4 @@
   - Problem 3.5 : Min-max problem for the overlapping optimized Schwarz waveform relaxation
   - Problem 3.6 : Generic Parallel Schwarz waveform relaxation algorithm
 
-[:book: Table of Content](../README.md) | [:arrow_left: Previous Section](../sec3.4/README.md) | [:arrow_right: Next Chapter](../../chap4/README.md)
+[:book: Table of Content](../../README.md) | [:arrow_left: Previous Section](../sec3.4/README.md)
