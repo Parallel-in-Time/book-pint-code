@@ -1,5 +1,5 @@
-N=1980;                                 % N number of time steps
-%N=2000;                                 % N number of time steps
+%N=1980;                                 % N number of time steps
+N=2000;                                 % N number of time steps
 J=100;                                  % J number of spatial steps 
 e=ones(J-1,1);                          % N=2000 limit for J=100, T=1/10 
 dx=1/J;                                 % finite difference Laplacian 

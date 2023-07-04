@@ -2,7 +2,7 @@ function [U,uTraj]=Nievergelt(solver,T,u0,N,uPred,Mn,width)
 % NIEVERGELT implementation of the method of Nievergelt for scalar ODEs
 %   [U,uTraj]=Nievergelt(solver,T,u0,N,uPred,Mn,width); solve a scalar
 %   ODE with Nievergelt's method on N time sub-intervals dividing
-%   (0,T]. u0 is the initial solution of the ODE; solver is a function
+%   (0,T]. u0 is the initial value of the ODE; solver is a function
 %   of the form u=solver(t0, t1, u0) that solves numerically the ODE
 %   between t0 and t1 with u0 as initial value, and returns the
 %   solution over the whole interval [t0,t1]; uPred is the cheap
