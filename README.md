@@ -1,6 +1,6 @@
 # Time Parallel Time Integration : code repository
 
-This repository contains all the source code (Python, Matlab) associated to the book _"Time Parallel Time Integration" (Gander & Lunet 2023)_, along with corrections of the problem given at the end of each chapters.
+This repository contains all the source code (Python, Matlab) associated to the book _"Time Parallel Time Integration" (Gander & Lunet 2024)_, along with corrections of the problem given at the end of each chapters.
 The folder organization follows the chapter structure of the book, as follow :
 
 ## Chapter 1 : Introduction
