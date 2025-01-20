@@ -1,14 +1,31 @@
 # Time Parallel Time Integration : code repository
 
-This repository contains all the source code (Python, Matlab) associated to the book _"Time Parallel Time Integration" (Gander & Lunet 2024)_, along with corrections of the problem given at the end of each chapters.
+This repository contains all the source code (Python, Matlab) associated to the book 
+_["Time Parallel Time Integration" (Gander & Lunet 2024)](https://epubs.siam.org/doi/book/10.1137/1.9781611978025)_, 
+
+```bibtex
+@book{gander2024time,
+	address = {Philadelphia, PA},
+	author = {Gander, Martin J. and Lunet, Thibaut},
+	doi = {10.1137/1.9781611978025},
+	edition = {},
+	eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611978025},
+	publisher = {Society for Industrial and Applied Mathematics},
+	title = {Time Parallel Time Integration},
+	url = {https://epubs.siam.org/doi/abs/10.1137/1.9781611978025},
+	year = {2024}
+}
+```
+
+along with corrections of the problems given at the end of each chapters.
 The folder organization follows the chapter structure of the book, as follow :
 
-## Chapter 1 : Introduction
+## [Chapter 1 : Introduction](./chap1/README.md)
 
-- [1.1 : Weather Prediction as an Example](./chap1/sec1.1/README.md)
-- [1.2 : Ordinary Differential Equations (ODEs)](./chap1/sec1.2/README.md)
-- [1.3 : Partial Differential Equations (PDEs)](./chap1/sec1.3/README.md)
-- [1.4 : Historical Overview](./chap1/sec1.4/README.md)
+- 1.1 : Weather Prediction as an Example
+- [1.2 : Ordinary Differential Equations (ODEs)](./chap1/README.md#section-12--ordinary-differential-equations-odes)
+- [1.3 : Partial Differential Equations (PDEs)](./chap1/README.md#section-13--partial-differential-equations-pdes)
+- [1.4 : Historical Overview](./chap1/README.md#section-14--historical-overview)
 - [1.5 : Problems](./chap1/sec1.5/README.md)
 
 ## Chapter 2 : Multiple Shooting Type Methods
