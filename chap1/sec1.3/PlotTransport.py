@@ -25,7 +25,10 @@ def plotTransport(u, x, t, u0=None):
     # High-resolution spatial grid for exact solution
     xx = np.linspace(a, b, 500)
     
+    plt.figure("PlotTransport")
     for n in range(u.shape[1]):  # Iterate over time steps
+        if not plt.fignum_exists("PlotTransport"): break
+
         plt.clf()
         if u0 is not None:
             exact_solution = u0(xx - t[n])

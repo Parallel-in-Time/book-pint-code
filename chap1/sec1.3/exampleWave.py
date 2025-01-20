@@ -21,14 +21,17 @@ for j in range(len(x)):
     u[j, 1] = u[j, 0]  # Zero initial velocity (ut0 = 0)
 
 # Time-stepping loop
+fig = plt.figure("exampleWave")
 for n in range(1, N):
+    if not plt.fignum_exists("exampleWave"): break
+    
     # Update interior points using finite difference method
     u[1:-1, n + 1] = (
         2 * u[1:-1, n]
         - u[1:-1, n - 1]
         + (dt**2 / dx**2) * (u[0:-2, n] - 2 * u[1:-1, n] + u[2:, n])
     )
-    
+
     # Plot solution at current time step
     plt.clf()
     plt.plot(x, u[:, n], label=f't={(n-1)*dt:.2f}')

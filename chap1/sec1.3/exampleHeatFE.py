@@ -10,7 +10,11 @@ T = 1/10
 dt = T/N
 u = np.zeros((N+1, J-1))
 u[0] = 20*e
+
+plt.figure("exampleHeatFE")
 for n in range(N):
+    if not plt.fignum_exists("exampleHeatFE"): break
+
     u[n+1] = u[n] + dt*A*u[n]
     plt.cla()
     plt.plot(np.arange(0, 1+dx, dx), [0, *u[n+1], 0])

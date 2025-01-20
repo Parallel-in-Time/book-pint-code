@@ -11,7 +11,7 @@ dt = T / N
 x = np.zeros((3, N+1))
 x[:, 0] = [20, 5, -5]
 
-ax = plt.figure().add_subplot(projection='3d')
+ax = plt.figure("exampleLorenz").add_subplot(projection='3d')
 plt.grid()
 
 xf = np.sqrt(b * (r - 1))       # Fixed points
@@ -19,6 +19,8 @@ yf = np.sqrt(b * (r - 1))
 zf = r - 1
 
 for i in range(N):
+    if not plt.fignum_exists("exampleLorenz"): break
+
     x[:, i + 1] = x[:, i] + dt*f(i*dt, x[:, i])     # Forward Euler step
     if (i+1) % 100 == 0:                            # plot only every 100th
         ax.cla()                                    # for animation speed

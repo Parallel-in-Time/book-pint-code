@@ -34,11 +34,15 @@ u = np.random.rand(J)  # Random initial guess
 w = 2 / 3  # Jacobi damping parameter
 
 # Multigrid V-cycle
+plt.figure("example2Grid")
 for n in range(3):  # Number of multigrid iterations
+    if not plt.fignum_exists("example2Grid"): break
+
     for i in range(nu):  # Jacobi smoothing steps
         u = u + w * h**2 / 2 * A @ u  # Jacobi damping step
 
     # Plot before coarse correction
+    plt.cla()
     plt.plot(x, np.concatenate(([0], u, [0])), label="Before coarse correction")
     plt.xlabel("x")
     plt.ylabel(f"Error (iteration {n + 1})")
@@ -54,6 +58,5 @@ for n in range(3):  # Number of multigrid iterations
     plt.legend()
     plt.grid()
     plt.pause(1.5)
-    plt.clf()
 
 plt.show()
