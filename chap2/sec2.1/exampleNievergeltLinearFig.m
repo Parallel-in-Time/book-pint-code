@@ -28,4 +28,4 @@ for n=2:N
     end
 end
 legend(Location='northeast'), set(gca,'fontsize', 12);
-saveas(gcf(), '../Figures/NievergeltExampleLinear', 'epsc')
+saveas(gcf(), 'NievergeltExampleLinear', 'epsc')

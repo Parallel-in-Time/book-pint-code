@@ -28,11 +28,11 @@ The folder organization follows the chapter structure of the book, as follow :
 - [1.4 : Historical Overview](./chap1/README.md#section-14--historical-overview)
 - [1.5 : Problems](./chap1/sec1.5/README.md)
 
-## Chapter 2 : Multiple Shooting Type Methods
+## [Chapter 2 : Multiple Shooting Type Methods](./chap2/README.md)
 
-- [2.1 : Idea of Nievergelt in 1964](./chap2/sec2.1/README.md)
-- [2.2 : Multiple Shooting Methods in Time](./chap2/sec2.2/README.md)
-- [2.3 : The Parareal Algorithm](./chap2/sec2.3/README.md)
+- [2.1 : Idea of Nievergelt in 1964](./chap2/README.md#section-21--idea-of-nievergelt-in-1964)
+- [2.2 : Multiple Shooting Methods in Time](./chap2/README.md#section-22--multiple-shooting-methods-in-time)
+- [2.3 : The Parareal Algorithm](./chap2/README.md#section-23--the-parareal-algorithm)
 - [2.4 : Problems](./chap2/sec2.4/README.md)
 
 ## Chapter 3 : Waveform Relaxation and Domain Decomposition

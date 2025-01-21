@@ -23,4 +23,4 @@
 
 ## [Section 1.5 : Problems](sec1.5/README.md)
 
-[📖 Book Content](../README.md)
+[📖 Table of Content](../README.md)

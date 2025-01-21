@@ -7,13 +7,19 @@ Created on Wed Nov 30 15:31:38 2022
 """
 import numpy as np
 import matplotlib.pyplot as plt
-from solver import forwardEuler, multipleShooting
+
+from ForwardEuler import forwardEuler
+from MultipleShooting import multipleShooting
 
 # Lorentz parameters and functions
 u0 = [20., 5., -5.]
 sigma, rho, beta = 10., 28., 8/3
 
-f = lambda t, u : [sigma*(u[1]-u[0]), u[0]*(rho-u[2])-u[1], u[0]*u[1]-beta*u[2]]
+f = lambda t, u : np.array([
+    sigma*(u[1]-u[0]),
+    u[0]*(rho-u[2])-u[1],
+    u[0]*u[1]-beta*u[2]
+    ])
 
 jac = lambda t, u : np.array([[-sigma, sigma, 0],
                               [rho-u[2], -1, -u[0]],
@@ -26,11 +32,11 @@ def rhsFull(t, u):
     jacEval = jac(t, u).dot(V)
     return np.ravel([uEval, *jacEval])
 
-# Definition of propagator (solution and Jacobian) on subinterval
+# Definition of propagator (solution and Jacobian) on sub-interval
 M = 10
 def propagator(t0, t1, u0):
     u0 = np.ravel([u0, *np.eye(3)])  # Initial Jacobian is identity
-    t, u = forwardEuler(rhsFull, t0, t1, u0, M)
+    t, u = forwardEuler(rhsFull, [t0, t1], u0, M)
     return u[-1, :3], u[-1, 3:].reshape((3, 3))  # rhs eval, Jacobian
 
 # Multiple shooting parameters
@@ -47,18 +53,14 @@ def setErrKPlot():
     plt.grid(True)
     plt.tight_layout()
 
-# -----------------------------------------------------------------------------
-# First experiment : Newton with different starting points
-# -----------------------------------------------------------------------------
-
 for tEnd in [0.5, 1, 1.5, 1.78, 2]:
 
     # Fine solution (for reference)
-    tFine, uFine = forwardEuler(f, 0, tEnd, u0, N*M)
+    tFine, uFine = forwardEuler(f, [0, tEnd], u0, N*M)
     uRef = uFine[::M]
 
     # Prediction for Multiple Shooting
-    tPred, uPred = forwardEuler(f, 0, tEnd, u0, N)
+    tPred, uPred = forwardEuler(f, [0, tEnd], u0, N)
 
     # Multiple Shooting (FE) solution
     times, uMS = multipleShooting(propagator, 0, tEnd, u0, N, K, uPred)

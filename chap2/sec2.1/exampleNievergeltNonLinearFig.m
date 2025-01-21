@@ -29,7 +29,7 @@ for n=2:N
     end
 end
 legend(Location='northeast'), set(gca,'fontsize', 12);
-saveas(figure(1), '../Figures/NievergeltExampleNonLinear_1', 'epsc')
+saveas(figure(1), 'NievergeltExampleNonLinear_1', 'epsc')
 
 Mn=4; width=0.4;                          % Nievergelt's method parameters
 solver=@(t0,t1,u0) UForwardEuler(f,t0,t1,u0,nSteps);
@@ -53,4 +53,4 @@ for n=2:N
     end
 end
 legend(Location='northeast'), set(gca,'fontsize', 12);
-saveas(figure(2), '../Figures/NievergeltExampleNonLinear_2', 'epsc')
+saveas(figure(2), 'NievergeltExampleNonLinear_2', 'epsc')

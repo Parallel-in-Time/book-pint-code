@@ -11,4 +11,4 @@
 - [Problem 1.9 : Implementation and testing of a wave equation solver](./prob1.9/README.md)
 - [Problem 1.10 : Analysis of the Newton's method](./prob1.10/README.md)
 
-[📖 Book Content](../../README.md) | [📄 Chapter Content](../README.md)
+[📖 Table of Content](../../README.md) | [📄 Chapter Sections](../README.md)

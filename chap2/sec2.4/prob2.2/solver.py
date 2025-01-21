@@ -167,7 +167,7 @@ def parareal(prop, rhs, t0, tEnd, u0, N, K, mF, mG):
     u = np.zeros((K+1, N+1, nDOF), dtype=u0.dtype)
 
     # Time grid
-    times = np.linspace(0, tEnd, N+1)
+    times = np.linspace(t0, tEnd, N+1)
 
     # Set u^k_0 = u0
     u[:, 0] = u0
