@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.sparse import spdiags, eye, csr_matrix
+from scipy.sparse import spdiags, eye, lil_matrix
 import matplotlib.pyplot as plt
 
 # Parameters
@@ -47,7 +47,7 @@ uBE = u.copy()                                 # Store the exact BE solution
 
 # Multigrid Parameters
 Jc = (J + 1) // 2 - 1                          # Coarse grid points
-P = csr_matrix((J, Jc))                        # Prolongation matrix
+P = lil_matrix((J, Jc))                        # Prolongation matrix
 for j in range(Jc):
     if 2 * j - 1 >= 0:
         P[2 * j - 1, j] = 0.5
@@ -89,6 +89,7 @@ for k in range(K):
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     ax.set_title(f'Error after presmoothing, iteration k={k+1}')
+    ax.view_init(15, -140)
     plt.colorbar(c, ax=ax)
     plt.pause(1)
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
@@ -115,9 +116,12 @@ for k in range(K):
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     ax.set_title(f'Error after correction, iteration k={k+1}')
+    ax.view_init(15, -140)
     plt.colorbar(c, ax=ax)
     plt.pause(1)
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
+
+    aaaaa
 
     # Postsmoothing
     for n in range(N):
@@ -136,6 +140,7 @@ for k in range(K):
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     ax.set_title(f'Error after postsmoothing, iteration k={k+1}')
+    ax.view_init(15, -140)
     plt.colorbar(c, ax=ax)
     plt.pause(1)
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
