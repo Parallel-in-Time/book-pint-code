@@ -20,18 +20,18 @@ The folder organization follows the chapter structure of the book, as below.
 - [2.3 : The Parareal Algorithm](./chap2/README.md#section-23--the-parareal-algorithm)
 - [2.4 : Problems](./chap2/sec2.4/README.md)
 
-## Chapter 3 : Waveform Relaxation and Domain Decomposition
+## [Chapter 3 : Waveform Relaxation and Domain Decomposition](./chap3/README.md)
 
 - 3.1 : Method of Successive Approximations
 - 3.2 : Classical Waveform Relaxation
-- [3.3 : Waveform Relaxation Based on Domain Decomposition](./chap3/sec3.3/README.md)
+- [3.3 : Waveform Relaxation Based on Domain Decomposition](./chap3/README.md#section-33--waveform-relaxation-based-on-domain-decomposition)
 - 3.4 : Optimized Schwarz Waveform Relaxation
 - 3.5 : Problems
 
 ## Chapter 4 : Time Multigrid Methods
 
-- [4.1 : Time Parallel Time Stepping](./chap4/sec4.1/README.md)
-- [4.2 : Parabolic Multigrid](./chap4/sec4.2/README.md)
+- 4.1 : Time Parallel Time Stepping
+- [4.2 : Parabolic Multigrid](./chap4/README.md#section-42--parabolic-multigrid)
 - [4.3 : Time Multigrid for the Dahlquist Equation](./chap4/sec4.3/README.md)
 - [4.4 : Space Time Multigrid Methods](./chap4/sec4.4/README.md)
 - [4.5 : MultiGrid Reduction In Time](./chap4/sec4.5/README.md)
