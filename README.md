@@ -2,23 +2,8 @@
 
 This repository contains all the source code (Python, Matlab) associated to the book 
 _["Time Parallel Time Integration" (Gander & Lunet 2024)](https://epubs.siam.org/doi/book/10.1137/1.9781611978025)_, 
-
-```bibtex
-@book{gander2024time,
-	address = {Philadelphia, PA},
-	author = {Gander, Martin J. and Lunet, Thibaut},
-	doi = {10.1137/1.9781611978025},
-	edition = {},
-	eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611978025},
-	publisher = {Society for Industrial and Applied Mathematics},
-	title = {Time Parallel Time Integration},
-	url = {https://epubs.siam.org/doi/abs/10.1137/1.9781611978025},
-	year = {2024}
-}
-```
-
 along with corrections of the problems given at the end of each chapters.
-The folder organization follows the chapter structure of the book, as follow :
+The folder organization follows the chapter structure of the book, as below.
 
 ## [Chapter 1 : Introduction](./chap1/README.md)
 
@@ -37,8 +22,8 @@ The folder organization follows the chapter structure of the book, as follow :
 
 ## Chapter 3 : Waveform Relaxation and Domain Decomposition
 
-- [3.1 : Method of Successive Approximations](./chap3/sec3.1/README.md)
-- [3.2 : Classical Waveform Relaxation](./chap3/sec3.2/README.md)
+- 3.1 : Method of Successive Approximations
+- 3.2 : Classical Waveform Relaxation
 - [3.3 : Waveform Relaxation Based on Domain Decomposition](./chap3/sec3.3/README.md)
 - [3.4 : Optimized Schwarz Waveform Relaxation](./chap3/sec3.4/README.md)
 - [3.5 : Problems](./chap3/sec3.5/README.md)
@@ -64,3 +49,19 @@ The folder organization follows the chapter structure of the book, as follow :
 - [5.6 : Time Parallelization Based on Integral Deferred Corrections](./chap5/sec5.6/README.md)
 - [5.7 : ParaExp](./chap5/sec5.7/README.md)
 - [5.8 : Problems](./chap5/sec5.8/README.md)
+
+## Cite this book
+
+```bibtex
+@book{gander2024time,
+	address = {Philadelphia, PA},
+	author = {Gander, Martin J. and Lunet, Thibaut},
+	doi = {10.1137/1.9781611978025},
+	edition = {},
+	eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611978025},
+	publisher = {Society for Industrial and Applied Mathematics},
+	title = {Time Parallel Time Integration},
+	url = {https://epubs.siam.org/doi/abs/10.1137/1.9781611978025},
+	year = {2024}
+}
+```
