@@ -25,8 +25,8 @@ The folder organization follows the chapter structure of the book, as below.
 - 3.1 : Method of Successive Approximations
 - 3.2 : Classical Waveform Relaxation
 - [3.3 : Waveform Relaxation Based on Domain Decomposition](./chap3/sec3.3/README.md)
-- [3.4 : Optimized Schwarz Waveform Relaxation](./chap3/sec3.4/README.md)
-- [3.5 : Problems](./chap3/sec3.5/README.md)
+- 3.4 : Optimized Schwarz Waveform Relaxation
+- 3.5 : Problems
 
 ## Chapter 4 : Time Multigrid Methods
 
