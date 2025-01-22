@@ -17,6 +17,7 @@ A=speye(size(L))-dt*L;                         % time stepping matrix
 for n=1:N                                      % compute exact solution
   u(2:end-1,n+1)=A\(u(2:end-1,n)+b(:,n));      % exact BE
 end
+D=diag(diag(A));
 
 Jc=(J+1)/2-1;                                  % coarse grid points
 P=sparse(J,Jc);                                % prolongation by

@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.sparse import spdiags, eye, lil_matrix
+from scipy.sparse.linalg import spsolve
 import matplotlib.pyplot as plt
 
 # Parameters
@@ -38,11 +39,11 @@ u[-1, :] = gr(t)
 
 # Time-stepping matrix
 A = eye(J) - dt * L
-D_inv = 1 / A.diagonal()                       # Inverse of the diagonal of A
+D = spdiags(A.diagonal(), 0, J, J).tocsr()     # Diagonal matrix of A
 
 # Exact Backward Euler solution
 for n in range(N):
-    u[1:-1, n + 1] = np.linalg.solve(A.toarray(), u[1:-1, n] + b[:, n])
+    u[1:-1, n + 1] = spsolve(A, u[1:-1, n] + b[:, n])
 uBE = u.copy()                                 # Store the exact BE solution
 
 # Multigrid Parameters
@@ -76,14 +77,13 @@ for k in range(K):
     for n in range(N):
         v = u[1:-1, n + 1]
         for j in range(nu):
-            v += alpha * (D_inv * (u[1:-1, n] + b[:, n] - A @ v))  # Correct Jacobi iteration
-        u[1:-1, n + 1] = v
+            v += alpha * spsolve(D, (u[1:-1, n] + b[:, n] - A @ v))
 
     # Plot error after presmoothing
     try:
         ax.collections[-1].colorbar.remove()
     except: pass
-    ax.cla()
+    ax.clear()
     X, T = np.meshgrid(x, t)
     c = ax.plot_surface(X, T, uBE.T - u.T, cmap='viridis', rstride=1, cstride=1)
     ax.set_xlabel('x')
@@ -103,14 +103,14 @@ for k in range(K):
     rc = R @ r
     uc = np.zeros((Jc + 2, N + 1))             # Zero initial guess
     for n in range(N):
-        uc[1:-1, n + 1] = np.linalg.solve(Ac.toarray(), uc[1:-1, n] + rc[:, n])
+        uc[1:-1, n + 1] = spsolve(Ac, uc[1:-1, n] + rc[:, n])
     u[1:-1, :] += P @ uc[1:-1, :]              # Add coarse correction
 
     # Plot error after coarse correction
     try:
         ax.collections[-1].colorbar.remove()
     except: pass
-    ax.cla()
+    ax.clear()
     X, T = np.meshgrid(x, t)
     c = ax.plot_surface(X, T, uBE.T - u.T, cmap='viridis', rstride=1, cstride=1)
     ax.set_xlabel('x')
@@ -121,20 +121,17 @@ for k in range(K):
     plt.pause(1)
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
 
-    aaaaa
-
     # Postsmoothing
     for n in range(N):
         v = u[1:-1, n + 1]
         for j in range(nu):
-            v += alpha * (D_inv * (u[1:-1, n] + b[:, n] - A @ v))  # Correct Jacobi iteration
-        u[1:-1, n + 1] = v
+            v += alpha * spsolve(D, (u[1:-1, n] + b[:, n] - A @ v))
 
     # Plot error after postsmoothing
     try:
         ax.collections[-1].colorbar.remove()
     except: pass
-    ax.cla()
+    ax.clear()
     X, T = np.meshgrid(x, t)
     c = ax.plot_surface(X, T, uBE.T - u.T, cmap='viridis', rstride=1, cstride=1)
     ax.set_xlabel('x')
