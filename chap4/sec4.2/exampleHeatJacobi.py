@@ -64,8 +64,7 @@ for nu in NU:
         u[1:-1, n + 1] = v                     # Update the solution
 
     # Plot the results
-    try:
-        ax.collections[-1].colorbar.remove()
+    try: ax.collections[-1].colorbar.remove()
     except: pass
     ax.cla()
     X, T = np.meshgrid(x, t)
