@@ -17,7 +17,22 @@ A=speye(size(L))-dt*L;                         % time stepping matrix
 for n=1:N                                      % compute exact solution
   u(2:end-1,n+1)=A\(u(2:end-1,n)+b(:,n));      % exact BE
 end
+uBE=u;                                         % keep exact BE solution
 D=diag(diag(A));
+NU=[5000 1000 100 5]
+for l=1:length(NU)
+  nu=NU(l)                                     % use nu Jacobi steps
+  for n=1:N
+    v=u(2:end-1,n);                            % use initial guess from
+    for j=1:nu                                 % previous time step
+      v=v+D\(u(2:end-1,n)+b(:,n)-A*v);         % for Jacobi iteration
+    end;                                       % with no damping
+    u(2:end-1,n+1)=v;
+  end
+  mesh(x,t,u'); xlabel('x'); ylabel('t');
+  title(['Approximation after nu=' num2str(nu) ' Jacobi steps']);
+  axis([0 1 0 5 -1 1]); pause;
+end
 
 Jc=(J+1)/2-1;                                  % coarse grid points
 P=sparse(J,Jc);                                % prolongation by
@@ -28,7 +43,8 @@ R=0.5*P';                                      % restriction by transpose
 Lc=R*L*P;                                      % coarse matrix by Galerkin
 Ac=speye(size(Lc))-dt*Lc;                      % coarsening in space only
 xc=x(1:2:end);                                 % coarse spatial mesh
-                                        % random initial guess
+
+u=uBE;                                         % random initial guess
 u(2:end-1,2:end)=rand(J,N);                    % with correct ic and bc
 nu=5; al=0.5; K=10;
 for k=1:K
