@@ -60,7 +60,7 @@ for k in range(K):
           v+=aDinv*(u[1:-1,n]+b[:,n]-A@v)           # for Jacobi iteration
         u[1:-1,n+1]=v                               # with damping alpha
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
-    ax.cla();
+    ax.cla()
     ax.plot_surface(*np.meshgrid(x, t), uBE.T-u.T, cmap='viridis',
                     rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x'), ax.set_ylabel('t')
@@ -76,7 +76,7 @@ for k in range(K):
         uc[1:-1,n+1]=spsolve(Ac,uc[1:-1,n]+rc[:,n]) # by exact BE
     u[1:-1]+=P@uc[1:-1]                             # add coarse correction
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
-    ax.cla();
+    ax.cla()
     ax.plot_surface(*np.meshgrid(x, t), uBE.T-u.T, cmap='viridis',
                     rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x'), ax.set_ylabel('t')
@@ -89,7 +89,7 @@ for k in range(K):
           v+=aDinv*(u[1:-1,n]+b[:,n]-A@v)           # for Jacobi iteration
         u[1:-1,n+1]=v                               # with damping alpha
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
-    ax.cla();
+    ax.cla()
     ax.plot_surface(*np.meshgrid(x, t), uBE.T-u.T, cmap='viridis',
                     rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x'), ax.set_ylabel('t')
@@ -114,7 +114,7 @@ for k in range(K):
           v+=aDinv*(u[1:-1,n]+b[:,n]-A@v)           # for Jacobi iteration
         u[1:-1,n+1]=v                               # with damping alpha
     if not plt.fignum_exists("exampleParabolicMultigrid"): break
-    ax.cla();
+    ax.cla()
     ax.plot_surface(*np.meshgrid(x, t), uBE.T-u.T, cmap='viridis',
                     rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x'), ax.set_ylabel('t')
