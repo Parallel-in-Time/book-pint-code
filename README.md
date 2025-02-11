@@ -41,8 +41,8 @@ The folder organization follows the chapter structure of the book, as below.
 
 ## Chapter 5 : Direct Space Time Parallel Solvers
 
-- [5.1 : Parallel Predictor Corrector Methods](./chap5/sec5.1/README.md)
-- [5.2 : Boundary Value Methods](./chap5/sec5.2/README.md)
+- [5.1 : Parallel Predictor Corrector Methods](./chap5/README.md#section-51--parallel-predictor-corrector-methods)
+- 5.2 : Boundary Value Methods
 - [5.3 : Time Parallel Cyclic Reduction](./chap5/sec5.3/README.md)
 - [5.4 : Time Parallel Methods Based on Laplace Transform](./chap5/sec5.4/README.md)
 - [5.5 : Time Parallelization Based on Diagonalization](./chap5/sec5.5/README.md)
