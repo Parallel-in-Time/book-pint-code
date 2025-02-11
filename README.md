@@ -33,11 +33,11 @@ The folder organization follows the chapter structure of the book, as below.
 - 4.1 : Time Parallel Time Stepping
 - [4.2 : Parabolic Multigrid](./chap4/README.md#section-42--parabolic-multigrid)
 - [4.3 : Time Multigrid for the Dahlquist Equation](./chap4/README.md#section-43--time-multigrid-for-the-dahlquist-equation)
-- [4.4 : Space Time Multigrid Methods](./chap4/sec4.4/README.md)
-- [4.5 : MultiGrid Reduction In Time](./chap4/sec4.5/README.md)
-- [4.6 : Block Iteration and Generating Functions](./chap4/sec4.6/README.md)
-- [4.7 : Parallel Full Approximation Scheme in Space-Time](./chap4/sec4.7/README.md)
-- [4.8 : Problems](./chap4/sec4.5/README.md)
+- [4.4 : Space Time Multigrid Methods](./chap4/README.md#section-44--space-time-multigrid-methods)
+- 4.5 : MultiGrid Reduction In Time
+- 4.6 : Block Iteration and Generating Functions
+- 4.7 : Parallel Full Approximation Scheme in Space-Time
+- 4.8 : Problems
 
 ## Chapter 5 : Direct Space Time Parallel Solvers
 

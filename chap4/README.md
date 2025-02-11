@@ -13,6 +13,12 @@
 | 📜 Description | 🧮 Matlab | 🐍 Python |
 | :--- | :--- | :--- |
 | Damped Jacobi iteration on the Dahlquist equation | [exampleDampedJacobiDahlquist.m](./sec4.3/exampleDampedJacobiDahlquist.m) | [exampleDampedJacobiDahlquist.py](./sec4.3/exampleDampedJacobiDahlquist.py) |
-| Two-Grid iteration on the Dahlquist equation | [exampleDahlquistTwoGrid.m](./sec4.3/exampleDahlquistTwoGrid.m) | [exampleDahlquistTwoGrid.py](./sec4.3/exampleDahlquistTwoGrid.py) | 
+| Two-Grid iteration on the Dahlquist equation | [exampleDahlquistTwoGrid.m](./sec4.3/exampleDahlquistTwoGrid.m) | [exampleDahlquistTwoGrid.py](./sec4.3/exampleDahlquistTwoGrid.py) |
+
+## Section 4.4 : Space Time Multigrid Methods
+
+| 📜 Description | 🧮 Matlab | 🐍 Python |
+| :--- | :--- | :--- |
+| Space-Time Multigrid on the Heat equation | [exampleSTMG.m](./sec4.4/exampleSTMG.m) | [exampleSTMG.py](./sec4.4/exampleSTMG.py) | 
 
 [📖 Table of Content](../README.md)
