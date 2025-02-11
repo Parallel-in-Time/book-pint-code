@@ -43,7 +43,9 @@ for nu in NU:                                       # use nu Jacobi steps
 Jc=(J+1)//2-1                                       # coarse grid points
 P=lil_matrix((J,Jc))                                # prolongation by
 for j in range(Jc):                                 # interpolation
-  P[2*j+1,j]=1; P[2*j,j]=0.5; P[2*j+2,j]=0.5
+  P[2*j+1,j]=1
+  P[2*j,j]=0.5
+  P[2*j+2,j]=0.5
 P=P.tocsr()
 R=0.5*P.T                                           # restriction by transpose
 Lc=R@L@P                                            # coarse matrix by Galerkin

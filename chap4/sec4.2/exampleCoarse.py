@@ -1,18 +1,17 @@
 import numpy as np
-from scipy.sparse import csr_matrix, eye
+from scipy.sparse import lil_matrix, csr_matrix, eye
 
 # Parameters
 J = 63                                          # Number of fine grid points
 Jc = (J + 1) // 2 - 1                           # Number of coarse grid points
 
 # Prolongation matrix (interpolation)
-P = csr_matrix((J, Jc))                         # Initialize sparse matrix
+P = lil_matrix((J, Jc))                         # Initialize sparse matrix
 for j in range(Jc):
-    P[2 * j, j] = 1                             # Assign interpolation weights
-    if 2 * j - 1 >= 0:
-        P[2 * j - 1, j] = 0.5
-    if 2 * j + 1 < J:
-        P[2 * j + 1, j] = 0.5
+    P[2*j+1, j] = 1
+    P[2*j, j] = 0.5
+    P[2*j + 2, j] = 0.5
+P = P.tocsr()
 
 # Restriction matrix (transpose of prolongation, scaled by 0.5)
 R = 0.5 * P.T

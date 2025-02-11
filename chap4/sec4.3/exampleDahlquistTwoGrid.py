@@ -1,74 +1,61 @@
 import numpy as np
+import scipy.sparse as sp
 import matplotlib.pyplot as plt
-from scipy.sparse import diags, lil_matrix
-from scipy.sparse.linalg import inv
 
 # Parameters
-l = 6                                   # number of levels
-N = 2**l - 1                            # number of gridpoints in time
+l = 6
+N = 2**l - 1
 T = 1
 dt = T / N
-t = np.linspace(0, T, N + 1)            # time grid
-la = -1                                 # Dahlquist parameter
+t = np.linspace(0, T, N+1)
+la = -1
+e = np.ones(N)
 
 # BE time stepping matrix
-e = np.ones(N)
-A = diags([-e, (1 - dt * la) * e], [-1, 0], shape=(N, N))
+diagonals = np.array([-e, (1 - dt * la) * e])
+A = sp.spdiags(diagonals, [-1, 0], N, N)
 
+# Initial conditions
 u0 = 0
-al = 0.5                                # Jacobi relaxation parameter
-
-# Random initial guess
-np.random.seed(0)                       # Set random seed for reproducibility
+al = 0.5
+np.random.seed(0)  # For reproducibility
 u = np.random.rand(N)
 
-# Coarse grid size
-Nc = 2**(l - 1) - 1
-
-# Prolongation matrix P (sparse)
-P = lil_matrix((N, Nc))                 # Initialize sparse matrix
+# Coarse grid setup
+Nc = 2**(l-1) - 1
+P = sp.lil_matrix((N, Nc))
 for j in range(Nc):
-    P[2 * j, j] = 1
-    P[2 * j - 1, j] = 0.5
-    P[2 * j + 1, j] = 0.5
-P = P.tocsr()                           # Convert to CSR format for efficiency
+    P[2*j+1, j] = 1
+    P[2*j, j] = 0.5
+    P[2*j + 2, j] = 0.5
 
-# Restriction matrix R
-R = 0.5 * P.T                           # Transpose of P scaled by 0.5
+P = P.tocsc()
+R = 0.5 * P.T
+Ac = R * A * P
 
-# Coarse matrix by Galerkin
-Ac = R @ A @ P                          # Coarse grid matrix
-
-# Number of presmoothing steps
+# Multigrid iteration
 nu = 4
+err = np.zeros(10)
 
-# Main loop
-err = []
+fig = plt.figure("exampleDahlquistTwoGrid")
+
 for k in range(10):
-    err.append(np.max(np.abs(u)))
+    if not plt.fignum_exists("exampleDahlquistTwoGrid"): break
 
-    # Presmoothing
-    for i in range(nu):
-        u = u - (al / (1 - dt * la)) * A @ u
-        plt.plot(t, np.concatenate(([u0], u)), '-')
-        plt.xlabel('t')
-        plt.ylabel('error')
-        plt.pause(0.1)                   # Pause to visualize the plot
+    err[k] = max(abs(u))
+    for i in range(nu):  # Presmoothing
+        u = u - al / (1 - dt * la) * A @ u
 
-    # Compute coarse correction
-    rc = R @ (-A @ u)                    # Restrict residual to coarse grid
-    uc = inv(Ac) @ rc                    # Solve on coarse grid
-    u = u + P @ uc                       # Prolong and update solution
+    plt.gca().cla()
+    plt.plot(t, np.concatenate(([u0], u)), '-')
+    plt.xlabel('t')
+    plt.ylabel('error')
+
+    # Coarse grid correction
+    rc = R @ (-A @ u)
+    u = u + P @ sp.linalg.spsolve(Ac, rc)
 
     # Plot after coarse correction
     plt.plot(t, np.concatenate(([u0], u)), '-r')
     plt.legend(['before coarse', 'after coarse'])
-    plt.pause(0.1)                       # Pause to visualize the plot
-
-# Plot error over iterations
-plt.figure()
-plt.plot(range(1, 11), err, '-o')
-plt.xlabel('Iteration')
-plt.ylabel('Max Error')
-plt.title('Error over Iterations')
-plt.show()
+    plt.pause(0.5)
