@@ -22,6 +22,13 @@
 | :--- | :--- | :--- |
 | Time-Parallel Laplace Transform on the Heat equation | [exampleLaplaceTransform.m](sec5.4/exampleLaplaceTransform.m) | [exampleLaplaceTransform.py](sec5.4/exampleLaplaceTransform.py)
 
+## Section 5.5 : Time Parallelization Based on Diagonalization
+
+| 📜 Description | 🧮 Matlab | 🐍 Python |
+| :--- | :--- | :--- |
+| Paradiag-I with Backward Euler to solve the ODE $y'+ay(t)=f(t)$ | [ODEBEP.m](./sec5.5/ODEBEP.m) | [ODEBEP.py](./sec5.5/ODEBEP.py) |
+| Paradiag-II applied on the Dahlquist problem | [exampleDirectDahlquist.m](./sec5.5/exampleDirectDahlquist.m) | [exampleDirectDahlquist.py](./sec5.5/exampleDirectDahlquist.py) |
+
 
 
 [📖 Table of Content](../README.md)
