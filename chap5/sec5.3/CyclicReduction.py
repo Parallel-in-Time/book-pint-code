@@ -30,28 +30,14 @@ def cyclicReduction(A, f):
     dm = A.diagonal(-1)
 
     # Indices for odd and even rows
-    idOdd = np.arange(0, n-1, 2)
-    idEven = np.arange(1, n, 2)
+    iOdd = np.arange(0, n-1, 2)
+    iEven = iOdd+1
 
     # Perform cyclic reduction
-    dn = -dm[idEven-1] / d[idOdd] * dm[idEven]
-    B = sp.diags([d[idEven], dn], [0, -1], shape=(n//2, n//2))
+    dn = - dm[iOdd[1:]] / d[iOdd[1:]] * dm[iEven[:-1]]
+    B = sp.diags([d[iEven], dn], [0, -1], shape=(n//2, n//2))
 
     # Reduce the right-hand side vector
-    g = f[idEven] - dm[idEven-1] / d[idOdd] * f[idOdd]
+    g = f[iEven] - dm[iOdd] / d[iOdd] * f[iOdd]
 
     return B, g
-
-# Example usage:
-# Define a lower bidiagonal matrix A and a vector f
-A = sp.diags([-np.ones(5), np.ones(6)], [-1, 0], shape=(6, 6))
-f = np.array([1, 2, 3, 4, 5, 6])
-
-# Perform cyclic reduction
-B, g = cyclicReduction(A, f)
-
-# Display the results
-print("Reduced matrix B:")
-print(B.toarray())
-print("Reduced vector g:")
-print(g)
