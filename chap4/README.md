@@ -12,6 +12,7 @@
 
 | 📜 Description | 🧮 Matlab | 🐍 Python |
 | :--- | :--- | :--- |
-| Damped Jacobi iteration on the Dahlquist equation | [exampleDampedJacobiDahlquist.m](./sec4.3/exampleDampedJacobiDahlquist.m) | [exampleDampedJacobiDahlquist.py](./sec4.3/exampleDampedJacobiDahlquist.py) | 
+| Damped Jacobi iteration on the Dahlquist equation | [exampleDampedJacobiDahlquist.m](./sec4.3/exampleDampedJacobiDahlquist.m) | [exampleDampedJacobiDahlquist.py](./sec4.3/exampleDampedJacobiDahlquist.py) |
+| Two-Grid iteration on the Dahlquist equation | [exampleDahlquistTwoGrid.m](./sec4.3/exampleDahlquistTwoGrid.m) | [exampleDahlquistTwoGrid.py](./sec4.3/exampleDahlquistTwoGrid.py) | 
 
 [📖 Table of Content](../README.md)

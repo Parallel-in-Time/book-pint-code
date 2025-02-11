@@ -23,6 +23,7 @@ u = np.random.rand(N)
 
 # Iteration loop
 for i in range(1, 21):
+    plt.gca().cla()
     plt.plot(t, np.concatenate(([u0], u)), '-')
     plt.xlabel('t')
     plt.ylabel(f'error iter = {i-1}')
@@ -31,4 +32,4 @@ for i in range(1, 21):
     # Damped Jacobi iteration
     u = u - (al / (1 - dt * la)) * A.dot(u)
 
-    plt.pause(0.1)  # Pause to visualize the plot
+    plt.pause(0.5)  # Pause to visualize the plot
