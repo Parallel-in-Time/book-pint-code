@@ -40,6 +40,7 @@ Gc=speye(size(Ac))-2*dt*Ac;                      % coarsening in time also
 rng('default')                                   % random initial guess
 u(2:end-1,2:end)=rand(J,N);                      % with correct ic and bc
 errcxt(1)=max(max(abs(uBE-u)));
+nu = 2; al=0.5;
 for k=1:10
   for j=1:nu                                     % use nu block Jacobi steps
     uo=u;                                        % block Jacobi is parallel
