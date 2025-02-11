@@ -1,7 +1,7 @@
 function [t,u]=RIDCRestarts(lambda,tspan,u0,N,M,K,R)
 % RIDCRESTARTS Solves the Dahlquist problem using RIDC with restarts.
 % [t,u]=RIDCRestarts(lambda,tspan,u0,N,M,K,R) solves the Dahlquist
-    test equation using RIDC with R restarts.
+% test equation using RIDC with R restarts.
 
 NR=N/R; t0=tspan(1); dtR=(tspan(2)-tspan(1))/R;
 uR0=u0; t=tspan(1); u=u0;
