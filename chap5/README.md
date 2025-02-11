@@ -16,6 +16,12 @@
 | Cyclic Reduction for a bidiagonal system | [CyclicBackSubstitution.m](./sec5.3/CyclicBackSubstitution.m) | [CyclicBackSubstitution.py](./sec5.3/CyclicBackSubstitution.py) |
 | example of use on Dahlquist equation | [exampleCyclicReductionDahlquist.m](./sec5.3/exampleCyclicReductionDahlquist.m) | [exampleCyclicReductionDahlquist.m](./sec5.3/exampleCyclicReductionDahlquist.py) |
 
+## Section 5.4 : Time Parallel Methods Based on Laplace Transform
+
+| 📜 Description | 🧮 Matlab | 🐍 Python |
+| :--- | :--- | :--- |
+| Time-Parallel Laplace Transform on the Heat equation | [exampleLaplaceTransform.m](sec5.4/exampleLaplaceTransform.m) | [exampleLaplaceTransform.py](sec5.4/exampleLaplaceTransform.py)
+
 
 
 [📖 Table of Content](../README.md)
