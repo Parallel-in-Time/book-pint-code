@@ -1,5 +1,4 @@
 import numpy as np
-import scipy.sparse as sp
 
 def cyclicBackSubstitution(A, f, xr):
     """
@@ -38,16 +37,3 @@ def cyclicBackSubstitution(A, f, xr):
     x[iOdd] = (f[iOdd+1] - d[iOdd+1] * xr) / dm[iOdd]
 
     return x
-
-# Example usage:
-# Define a lower bidiagonal matrix A, a vector f, and known solution values xr
-A = sp.diags([-np.ones(5), np.ones(6)], [-1, 0], shape=(6, 6))
-f = np.array([1, 2, 3, 4, 5, 6])
-xr = np.array([2, 4, 6])
-
-# Perform cyclic back-substitution
-x = cyclicBackSubstitution(A, f, xr)
-
-# Display the result
-print("Solution vector x:")
-print(x)
