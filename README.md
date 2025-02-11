@@ -28,7 +28,7 @@ The folder organization follows the chapter structure of the book, as below.
 - 3.4 : Optimized Schwarz Waveform Relaxation
 - 3.5 : Problems
 
-## Chapter 4 : Time Multigrid Methods
+## [Chapter 4 : Time Multigrid Methods](./chap4/README.md)
 
 - 4.1 : Time Parallel Time Stepping
 - [4.2 : Parabolic Multigrid](./chap4/README.md#section-42--parabolic-multigrid)
@@ -39,7 +39,7 @@ The folder organization follows the chapter structure of the book, as below.
 - 4.7 : Parallel Full Approximation Scheme in Space-Time
 - 4.8 : Problems
 
-## Chapter 5 : Direct Space Time Parallel Solvers
+## [Chapter 5 : Direct Space Time Parallel Solvers](./chap5/README.md)
 
 - [5.1 : Parallel Predictor Corrector Methods](./chap5/README.md#section-51--parallel-predictor-corrector-methods)
 - 5.2 : Boundary Value Methods
