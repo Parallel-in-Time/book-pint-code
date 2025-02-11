@@ -34,7 +34,8 @@ for n in range(N*p):
 fig = plt.figure("exampleParaExp")
 ax = fig.add_subplot(111, projection='3d')
 X, T_mesh = np.meshgrid(x, np.linspace(0, T, N*p+1))
-ax.plot_surface(X, T_mesh, u.T, cmap='viridis')
+ax.plot_surface(X, T_mesh, u.T, cmap='viridis',
+                rstride=1, cstride=1, shade=False)
 ax.set_xlabel('x')
 ax.set_ylabel('t')
 plt.pause(0.5)
@@ -48,7 +49,8 @@ for j in range(p):
 
     # Plot v solutions
     T_mesh_v = np.linspace(j * N * dt, (j + 1) * N * dt, N+1)
-    ax.plot_surface(*np.meshgrid(X[0], T_mesh_v), v[j].T, cmap='viridis')
+    ax.plot_surface(*np.meshgrid(X[0], T_mesh_v), v[j].T, cmap='viridis',
+                    rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     plt.pause(0.5)
@@ -65,7 +67,8 @@ for j in range(p):
 
     # Plot w solutions
     T_mesh_w = np.linspace(0, T, p+1)
-    ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), w[j].T, cmap='viridis')
+    ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), w[j].T, cmap='viridis',
+                    rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     plt.pause(0.5)
@@ -73,7 +76,8 @@ for j in range(p):
 
 # Sum ParaExp solution
 UPE = w[0].copy()
-ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis')
+ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis',
+                rstride=1, cstride=1, shade=False)
 ax.set_xlabel('x')
 ax.set_ylabel('t')
 plt.pause(0.5)
@@ -81,14 +85,16 @@ plt.pause(0.5)
 for j in range(1, p):
     UPE += w[j]
 
-    ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis')
+    ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis',
+                    rstride=1, cstride=1, shade=False)
     ax.set_xlabel('x')
     ax.set_ylabel('t')
     plt.pause(0.5)
 
 UPE[:, p] += v[p-1][:, N]
 
-ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis')
+ax.plot_surface(*np.meshgrid(X[0], T_mesh_w), UPE.T, cmap='viridis',
+                rstride=1, cstride=1, shade=False)
 ax.set_xlabel('x')
 ax.set_ylabel('t')
 plt.pause(0.5)
