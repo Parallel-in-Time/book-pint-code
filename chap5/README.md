@@ -16,6 +16,8 @@
 | Cyclic Reduction for a bidiagonal system | [CyclicBackSubstitution.m](./sec5.3/CyclicBackSubstitution.m) | [CyclicBackSubstitution.py](./sec5.3/CyclicBackSubstitution.py) |
 | example of use on Dahlquist equation | [exampleCyclicReductionDahlquist.m](./sec5.3/exampleCyclicReductionDahlquist.m) | [exampleCyclicReductionDahlquist.m](./sec5.3/exampleCyclicReductionDahlquist.py) |
 
+> 🔔 The code for `CyclicReduction` given in the book is incomplete, the version above is the correct one. 
+
 ## Section 5.4 : Time Parallel Methods Based on Laplace Transform
 
 | 📜 Description | 🧮 Matlab | 🐍 Python |
@@ -39,5 +41,11 @@
 | Parallel Integral Deferred Corrections | [PIDC.m](./sec5.6/PIDC.m) | [PIDC.py](./sec5.6/PIDC.py) |
 | Revisionist Integral Deferred Corrections | [RIDC.m](./sec5.6/RIDC.m) | [RIDC.py](./sec5.6/RIDC.py) |
 | Revisionist Integral Deferred Corrections with Restarts | [RIDCRestarts.m](./sec5.6/RIDCRestarts.m) | [RIDCRestarts.py](./sec5.6/RIDCRestarts.py) |
+
+## Section 5.7 : ParaExp
+
+| 📜 Description | 🧮 Matlab | 🐍 Python |
+| :--- | :--- | :--- |
+| ParaExp used to solve the Heat equation in Matlab | [exampleParaExp.m](./sec5.7/exampleParaExp.m) | [exampleParaExp.py](./sec5.7/exampleParaExp.py) | 
 
 [📖 Table of Content](../README.md)

@@ -46,7 +46,7 @@ The folder organization follows the chapter structure of the book, as below.
 - [5.3 : Time Parallel Cyclic Reduction](./chap5/README.md#section-53--time-parallel-cyclic-reduction)
 - [5.4 : Time Parallel Methods Based on Laplace Transform](./chap5/README.md#section-54--time-parallel-methods-based-on-laplace-transform)
 - [5.5 : Time Parallelization Based on Diagonalization](./chap5/README.md#section-55--time-parallelization-based-on-diagonalization)
-- [5.6 : Time Parallelization Based on Integral Deferred Corrections](./chap5/sec5.6/README.md)
+- [5.6 : Time Parallelization Based on Integral Deferred Corrections](./chap5/README.md#section-56--time-parallelization-based-on-integral-deferred-corrections)
 - [5.7 : ParaExp](./chap5/sec5.7/README.md)
 - [5.8 : Problems](./chap5/sec5.8/README.md)
 
